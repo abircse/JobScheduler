@@ -106,6 +106,8 @@ public class UpdateSmsSchedule extends AppCompatActivity implements DatePickerDi
 
                 cancelPreviousAlarm();
                 Toast.makeText(getApplicationContext(), "Schedule Cancle & Sms Information Deleted From Database", Toast.LENGTH_LONG).show();
+                finish();
+                startActivity(new Intent(getApplicationContext(), SmsSchedulerActivity.class));
             }
         });
 
